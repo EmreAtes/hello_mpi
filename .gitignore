@@ -1,3 +1,6 @@
+# Copy
+*.copy
+
 # Prerequisites
 *.d
 
