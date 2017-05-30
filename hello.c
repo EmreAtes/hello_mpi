@@ -71,7 +71,7 @@ int main(int argc, char **argv)
     if (!me) {
         time(&timer);
         tm_info = localtime(&timer);
-        strftime(timebuf, 26, "%Y-%m-%d %H:%M:%S", tm_info);
+        strftime(timebuf, sizeof(timebuf), "%Y-%m-%d %H:%M:%S", tm_info);
         printf("%s: finished\n", timebuf);
     }
 
