@@ -67,7 +67,7 @@ int main(int argc, char **argv)
     // Sleep 10 seconds
     sleep(10);
     MPI_Barrier(MPI_COMM_WORLD);
-    
+
     // Print finish time
     if (!me) {
         time(&timer);

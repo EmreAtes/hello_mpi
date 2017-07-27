@@ -1,12 +1,17 @@
-CC = mpicc
+CC := cc
+SRCS := hello.c
 
-all: hello.out
+OBJS := ${SRCS:.c=.o}
+PROGS := ${SRCS:.c=.out}
 
-hello.out: hello.c
-	$(CC)  -o hello.out hello.c
+.PHONY: all
+all: ${PROGS}
 
-copy: hello.c
-	$(CC) -o hello.out.copy hello.c
+${PROGS}: ${OBJS}
+	${CC} $< -o $@
+
+%.o: %.c
+	${CC} -c $<
 
 clean:
-	rm -rf hello *.o
+	rm -rf ${PROGS} ${OBJS}
