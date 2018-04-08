@@ -27,7 +27,7 @@ int main(int argc, char **argv)
         time(&timer);
         tm_info = localtime(&timer);
         strftime(timebuf, sizeof(timebuf), "%Y-%m-%d %H:%M:%S", tm_info);
-        printf("%s: starting on %s\n", timebuf, getenv("SLURM_NODELIST"));
+        printf("%s: starting on %s\n", timebuf, getenv("HOSTNAME"));
         printf("Job nodelist: %s\n", getenv("SLURM_JOB_NODELIST"));
     }
 

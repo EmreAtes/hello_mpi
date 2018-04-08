@@ -1,4 +1,4 @@
-CC := cc
+CC := mpicc
 SRCS := hello.c
 
 OBJS := ${SRCS:.c=.o}
